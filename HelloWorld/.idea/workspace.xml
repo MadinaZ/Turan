@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b55e7173-32b1-4c67-bc99-33d4c1111657" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Madina/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Madina/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1gpXfN9R2B7IawssQ1mxTl2n6i9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.Madina.Main" />
+      <module name="HelloWorld" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b55e7173-32b1-4c67-bc99-33d4c1111657" name="Default Changelist" comment="" />
+      <created>1598812612579</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598812612579</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1142" height="248" key="GridCell.Tab.0.bottom" timestamp="1598829401264">
+      <screen x="50" y="23" width="1390" height="877" />
+    </state>
+    <state width="1142" height="248" key="GridCell.Tab.0.bottom/1440.23.1288.923/50.23.1390.877@50.23.1390.877" timestamp="1598829401264" />
+    <state width="1317" height="343" key="GridCell.Tab.0.bottom/1440.23.1288.923/52.23.1388.877@52.23.1388.877" timestamp="1598824018146" />
+    <state width="1317" height="343" key="GridCell.Tab.0.bottom/52.23.1388.877@52.23.1388.877" timestamp="1598827549610" />
+    <state width="1142" height="248" key="GridCell.Tab.0.center" timestamp="1598829401263">
+      <screen x="50" y="23" width="1390" height="877" />
+    </state>
+    <state width="1142" height="248" key="GridCell.Tab.0.center/1440.23.1288.923/50.23.1390.877@50.23.1390.877" timestamp="1598829401263" />
+    <state width="1317" height="343" key="GridCell.Tab.0.center/1440.23.1288.923/52.23.1388.877@52.23.1388.877" timestamp="1598824018145" />
+    <state width="1317" height="343" key="GridCell.Tab.0.center/52.23.1388.877@52.23.1388.877" timestamp="1598827549609" />
+    <state width="1142" height="248" key="GridCell.Tab.0.left" timestamp="1598829401263">
+      <screen x="50" y="23" width="1390" height="877" />
+    </state>
+    <state width="1142" height="248" key="GridCell.Tab.0.left/1440.23.1288.923/50.23.1390.877@50.23.1390.877" timestamp="1598829401263" />
+    <state width="1317" height="343" key="GridCell.Tab.0.left/1440.23.1288.923/52.23.1388.877@52.23.1388.877" timestamp="1598824018145" />
+    <state width="1317" height="343" key="GridCell.Tab.0.left/52.23.1388.877@52.23.1388.877" timestamp="1598827549608" />
+    <state width="1142" height="248" key="GridCell.Tab.0.right" timestamp="1598829401263">
+      <screen x="50" y="23" width="1390" height="877" />
+    </state>
+    <state width="1142" height="248" key="GridCell.Tab.0.right/1440.23.1288.923/50.23.1390.877@50.23.1390.877" timestamp="1598829401263" />
+    <state width="1317" height="343" key="GridCell.Tab.0.right/1440.23.1288.923/52.23.1388.877@52.23.1388.877" timestamp="1598824018145" />
+    <state width="1317" height="343" key="GridCell.Tab.0.right/52.23.1388.877@52.23.1388.877" timestamp="1598827549609" />
+  </component>
+</project>
