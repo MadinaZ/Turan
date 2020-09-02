@@ -54,7 +54,8 @@ struct Main: View {
                     ScrollView(.vertical, showsIndicators: false){
                         VStack{
                             NavigationLink(destination: Reception()
-                            .environmentObject(MainObservable())){
+                            .environmentObject(MainObservable())
+                            ){
                                 Text("Reception")
                                     .font(.custom("Didot", size: 18))
                                     .frame(width: 300, height: 60)

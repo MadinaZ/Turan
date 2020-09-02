@@ -74,7 +74,7 @@ struct Homescreen : View {
                         ZStack{
                             Color("Back")
                             Main()
-                        }//.edgesIgnoringSafeArea(.all)
+                        }.edgesIgnoringSafeArea(.all)
                     }
                         
                     else if self.index == 1{

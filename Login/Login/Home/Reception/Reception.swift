@@ -1,4 +1,3 @@
-//
 //  Reception.swift
 //  Login
 //
@@ -40,7 +39,6 @@ struct Reception : View {
                         Text("No Chat History")
                     }
                     else{
-
                         Indicator()
                     }
 
@@ -57,7 +55,6 @@ struct Reception : View {
 
                                     self.uid = i.id
                                     self.name = i.name
-//                                    self.pic = i.pic
                                     self.chat.toggle()
 
                                 }) {
@@ -170,7 +167,6 @@ struct newChatView : View {
 
                                     self.uid = i.id
                                     self.name = i.name
-//                                    self.pic = i.pic
                                     self.show.toggle()
                                     self.chat.toggle()
 
