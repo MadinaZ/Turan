@@ -10,6 +10,10 @@ import SwiftUI
 
 struct AtHome: View{
     var body: some View{
-        Text("At Home")
+        ZStack{
+            BackSplash()
+            Text("At Home")
+
+        }
     }
 }

@@ -10,27 +10,27 @@ import SwiftUI
 import Foundation
 import UIKit
 
-//extension UIColor{
-//    static let myColor = UIColor(red: 0.138, green: 0.153, blue: 0.168, alpha: 1)
-//    static let myCamel = UIColor(red: 0.650, green: 0.579, blue: 0.447, alpha: 1)
-//}
+extension UIColor{
+    static let myColor = UIColor(red: 0.138, green: 0.153, blue: 0.168, alpha: 1)
+    static let myCamel = UIColor(red: 0.650, green: 0.579, blue: 0.447, alpha: 1)
+}
 struct Requests: View {
     @State var select = 0
 
-//    init() {
-//
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.myCamel]
-//        UITableView.appearance().separatorStyle = .none
-//        UITableViewCell.appearance().backgroundColor = UIColor.myColor
-//        UITableView.appearance().backgroundColor = UIColor.myColor
-//    }
+    init() {
+
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.myCamel]
+        UITableView.appearance().separatorStyle = .none
+        UITableViewCell.appearance().backgroundColor = UIColor.myColor
+        UITableView.appearance().backgroundColor = UIColor.myColor
+    }
     
     var body: some View {
         
         NavigationView {
             
             ZStack{
-                Color("Back").edgesIgnoringSafeArea(.all)
+                BackSplash()
                 VStack {
                     
                     VStack(spacing: 8){

@@ -20,70 +20,64 @@ struct Reception : View {
     
     
     var body : some View{
-//        Text("Reception")
-//        if selectedResidence ==
-        NavigationView{
-        ZStack{
-            NavigationLink(destination: ChatView(name: self.name, uid: self.uid, chat: self.$chat), isActive: self.$chat) {
-
-                Text("")
-            }
-            BackSplash()
-
-            VStack{
-
-                if self.datas.recents.count == 0{
-
-                    if self.datas.norecetns{
-
-                        Text("No Chat History")
+        //        Text("Reception")
+        //        if selectedResidence ==
+//        NavigationView{
+            ZStack{
+                NavigationLink(destination: ChatView(name: self.name, uid: self.uid, chat: self.$chat), isActive: self.$chat) {
+                    
+                    Text("")
+                }
+                BackSplash()
+                
+                VStack{
+                    
+                    if self.datas.recents.count == 0{
+                        
+                        if self.datas.norecetns{
+                            
+                            Text("No Chat History")
+                        }
+                        else{
+                            Indicator()
+                        }
+                        
                     }
                     else{
-                        Indicator()
-                    }
-
-                }
-                else{
-
-                    ScrollView(.vertical, showsIndicators: false) {
-
-                        VStack(spacing: 12){
-
-                            ForEach(datas.recents.sorted(by: {$0.stamp > $1.stamp})){i in
-
-                                Button(action: {
-
-                                    self.uid = i.id
-                                    self.name = i.name
-                                    self.chat.toggle()
-
-                                }) {
-                                    RecentCellView(name: i.name, time: i.time, date: i.date, lastmsg: i.lastmsg)
+                        
+                        ScrollView(.vertical, showsIndicators: false) {
+                            VStack(spacing: 12){
+                                ForEach(datas.recents.sorted(by: {$0.stamp > $1.stamp})){i in
+                                    Button(action: {
+                                        self.uid = i.id
+                                        self.name = i.name
+                                        self.chat.toggle()
+                                    }) {
+                                        RecentCellView(name: i.name, time: i.time, date: i.date, lastmsg: i.lastmsg)
+                                    }
+                                    
                                 }
-
-                            }
-
-                        }.padding()
-
+                                
+                            }.padding()
+                            
+                        }
                     }
-                }
-            }.navigationBarTitle("Home",displayMode: .inline)
-              .navigationBarItems(trailing:
+                }.navigationBarTitle("Home",displayMode: .inline)
+                    .navigationBarItems(trailing:
 
-                  Button(action: {
+                        Button(action: {
 
-                    self.show.toggle()
+                            self.show.toggle()
 
-                  }, label: {
-                      Image(systemName: "square.and.pencil").resizable().frame(width: 25, height: 25)
-                  }
-              )
-
-            )
-        }
-    }
+                        }, label: {
+                            Image(systemName: "square.and.pencil").resizable().frame(width: 25, height: 25)
+                        }
+                        )
+                )
+            }
+//        }
         .sheet(isPresented: self.$show) {
-
+            
             newChatView(name: self.$name, uid: self.$uid, show: self.$show, chat: self.$chat)
         }
     }

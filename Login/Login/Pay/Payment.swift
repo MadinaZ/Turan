@@ -26,7 +26,7 @@ struct Payments: View {
             {
                 History()
             }
-        }.edgesIgnoringSafeArea(.all)
+        }//.edgesIgnoringSafeArea(.all)
     }
 }
 

@@ -23,19 +23,18 @@ struct Main: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Color("Back").edgesIgnoringSafeArea(.all)
+                BackSplash()
                 VStack{
-                    
                     HStack{
                         Image("Horse2")
                             .resizable()
                             .frame(width: 70, height: 60)
-                            .offset(x: -100)
+                            .offset(x: -100,  y: -120)
                         Text("TuranClients")
                             .foregroundColor(Color("Camel"))
                             .font(.custom("Didot", size: 21))
-                            .offset(x: -108, y: 3)
-                    }.padding(.top, 30)
+                            .offset(x: -108, y: -110)
+                    }//.padding(.bottom, 10)
                     
                     
                     if self.categories.datas.count != 0 {
@@ -50,19 +49,19 @@ struct Main: View {
                         }
                     }
                     
-                    
                     ScrollView(.vertical, showsIndicators: false){
                         VStack{
                             NavigationLink(destination: Reception()
-                            .environmentObject(MainObservable())
-                            ){
+                                .environmentObject(MainObservable()))
+                            {
                                 Text("Reception")
                                     .font(.custom("Didot", size: 18))
                                     .frame(width: 300, height: 60)
                                     .foregroundColor(Color("Back"))
                             }
                             .background(Color("A"))
-                            }.cornerRadius(25)
+                            .cornerRadius(25)
+                            }
 
                         Spacer()
                         
@@ -72,9 +71,10 @@ struct Main: View {
                                     .font(.custom("Didot", size: 18))
                                     .frame(width: 300, height: 60)
                                     .foregroundColor(Color("Back"))
-                            }.navigationBarTitle(Text("At Home"), displayMode: .inline)
-                                .background(Color("B"))
-                        }.cornerRadius(25)
+                            }
+                            .background(Color("B"))
+                            .cornerRadius(25)
+                        }
                             
                         Spacer()
 
@@ -86,7 +86,8 @@ struct Main: View {
                                     .foregroundColor(Color("Back"))
                             }
                             .background(Color("C"))
-                        }.cornerRadius(25)
+                            .cornerRadius(25)
+                        }
                           
                         Spacer()
 
@@ -98,7 +99,8 @@ struct Main: View {
                                     .foregroundColor(Color("Back"))
                             }
                             .background(Color("D"))
-                        }.cornerRadius(25)
+                            .cornerRadius(25)
+                        }
                             
                     }//scroll
                     

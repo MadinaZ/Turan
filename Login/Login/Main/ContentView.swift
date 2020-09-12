@@ -11,20 +11,20 @@ import Firebase
 import Combine
 import FirebaseFirestore
 
-extension UIColor{
-    static let myColor2 = UIColor(red: 0.138, green: 0.153, blue: 0.168, alpha: 1)
-    static let myCamel2 = UIColor(red: 0.650, green: 0.579, blue: 0.447, alpha: 1)
-}
+//extension UIColor{
+//    static let myColor2 = UIColor(red: 0.138, green: 0.153, blue: 0.168, alpha: 1)
+//    static let myCamel2 = UIColor(red: 0.650, green: 0.579, blue: 0.447, alpha: 1)
+//}
 
 struct ContentView: View {
 
-    init() {
-
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.myCamel2]
-        UITableView.appearance().separatorStyle = .none
-        UITableViewCell.appearance().backgroundColor = UIColor.myColor2
-        UITableView.appearance().backgroundColor = UIColor.myColor2
-    }
+//    init() {
+//
+//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.myCamel2]
+//        UITableView.appearance().separatorStyle = .none
+//        UITableViewCell.appearance().backgroundColor = UIColor.myColor2
+//        UITableView.appearance().backgroundColor = UIColor.myColor2
+//    }
 
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
 
@@ -66,26 +66,25 @@ struct Homescreen : View {
 //    @Binding var show: Bool
         
     var body: some View{
-        
+        NavigationView{
             ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
 
                 VStack{
                     if self.index == 0{
-                        ZStack{
-                            Color("Back")
                             Main()
-                        }.edgesIgnoringSafeArea(.all)
                     }
                         
                     else if self.index == 1{
                         Requests()
+//                        Reception()
+//                        .environmentObject(MainObservable())
                     }
                         
                     else if self.index == 2{
                         ZStack{
-                            Color("Back")
+                            BackSplash()
                             Payments()
-                        }.edgesIgnoringSafeArea(.all)
+                        }
                     }
                     else{
                         ZStack{
@@ -98,7 +97,8 @@ struct Homescreen : View {
                     }
                 }
                 TabView(index: $index)
-            }).edgesIgnoringSafeArea(.bottom)
+            })
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -408,29 +408,29 @@ struct CircleImage: View{
 
 
  struct TabView : View {
-     
+
     @Binding var index: Int
      @State var curvePos : CGFloat = 0
-     
+
      var body: some View{
-             
+
              HStack{
                  GeometryReader{g in
-                     
+
                      VStack{
-                         
+
                          Button(action: {
-                             
+
                              withAnimation(.spring()){
-                                
-                                
+
+
                                 self.index = 0
                                 self.curvePos = g.frame(in: .global).midX
                              }
-                             
+
                          }, label: {
-                             
-                            Image("home").foregroundColor(Color("Back"))
+
+                            Image(systemName: "house.fill").foregroundColor(Color("Back"))
                                  .frame(width: 28, height: 28)
                                  .padding(.all, 15)
                              // animating View...
@@ -449,27 +449,27 @@ struct CircleImage: View{
                      }
                  }
                  .frame(width: 43, height: 43)
-                 
+
                  Spacer(minLength: 0)
 
-                
+
                  GeometryReader{g in
-                     
+
                      VStack{
-                         
+
                          Button(action: {
-                             
+
                              withAnimation(.spring()){
-                                 
+
                                 self.index = 1
                                  // assigning it whenever its button is clicked...
-                                 
+
                                  self.curvePos = g.frame(in: .global).midX
                              }
-                             
+
                          }, label: {
-                             
-                            Image(systemName: "wrench").font(Font.title.bold())
+
+                            Image(systemName: "wrench.fill")//.font(Font.title.bold())
                                 .foregroundColor(Color("Back"))
                                  .frame(width: 28, height: 28)
                                  .padding(.all, 15)
@@ -481,23 +481,23 @@ struct CircleImage: View{
                      .frame(width: 43, height: 43)
                  }
                  .frame(width: 43, height: 43)
-                 
+
                  Spacer(minLength: 0)
-                 
+
                  GeometryReader{g in
-                     
+
                      VStack{
                          Button(action: {
-                             
+
                              withAnimation(.spring()){
-                                 
+
                                 self.index = 2
                                  self.curvePos = g.frame(in: .global).midX
                              }
-                             
+
                          }, label: {
-                             
-                             Image("payment").foregroundColor(Color("Back"))
+
+                             Image(systemName: "creditcard.fill").foregroundColor(Color("Back"))
                                  .frame(width: 28, height: 28)
                                  .padding(.all, 15)
                                 .background(Color("Gray").opacity(self.index == 2 ? 1 : 0).clipShape(Circle()))
@@ -508,21 +508,21 @@ struct CircleImage: View{
                      .frame(width: 43, height: 43)
                  }
                  .frame(width: 43, height: 43)
-                 
+
                  Spacer(minLength: 0)
-                 
+
                  GeometryReader{g in
                      VStack{
                          Button(action: {
                              withAnimation(.spring()){
-                                 
+
                                 self.index = 3
                                  self.curvePos = g.frame(in: .global).midX
                              }
-                             
+
                          }, label: {
-                             
-                            Image(systemName: "person").font(Font.title.bold())
+
+                            Image(systemName: "person.fill")//.font(Font.title.bold())
                                 .foregroundColor(Color("Back"))
                                  .frame(width: 28, height: 28)
                                  .padding(.all, 15)
