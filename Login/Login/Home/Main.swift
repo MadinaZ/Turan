@@ -21,7 +21,7 @@ struct Main: View {
     @EnvironmentObject var categories: getScrollItem
     
     var body: some View {
-        NavigationView{
+//        NavigationView{
             ZStack{
                 BackSplash()
                 VStack{
@@ -107,7 +107,7 @@ struct Main: View {
                     
                 }//endVSTACK//.environmentObject(categories)
             }
-        }
+//        }
         
     }
 }

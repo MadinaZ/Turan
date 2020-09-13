@@ -29,17 +29,18 @@ struct ContentView: View {
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
 
     var body: some View {
-
             VStack{
                 if self.status{
-                    Homescreen()
+                    NavigationView{
+                        Homescreen()
+                    }
                 }
                 else{
                     NavigationView{
                         FirstPage()
                     }
-                }
             }
+        }
 
         .onAppear() {
             NotificationCenter.default.addObserver(forName: NSNotification.Name("statusChange"), object: nil, queue: .main) { (_) in
@@ -66,39 +67,38 @@ struct Homescreen : View {
 //    @Binding var show: Bool
         
     var body: some View{
-        NavigationView{
+//        NavigationView{
             ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
-
-                VStack{
-                    if self.index == 0{
+                    VStack{
+                        if self.index == 0{
                             Main()
-                    }
-                        
-                    else if self.index == 1{
-                        Requests()
-//                        Reception()
-//                        .environmentObject(MainObservable())
-                    }
-                        
-                    else if self.index == 2{
-                        ZStack{
-                            BackSplash()
-                            Payments()
+                        }
+                            
+                        else if self.index == 1{
+                            Requests()
+                        }
+                            
+                        else if self.index == 2{
+                            ZStack{
+                                BackSplash()
+                                Payments()
+                            }
+                        }
+                        else{
+                            ZStack{
+                                Color("Back")
+                                //UserAcc(show: self.$show)
+                                UserAcc()
+                                    .environmentObject(MainObservable())
+                                
+                            }.edgesIgnoringSafeArea(.all)
                         }
                     }
-                    else{
-                        ZStack{
-                            Color("Back")
-//                            UserAcc(show: self.$show)
-                        UserAcc()
-                            .environmentObject(MainObservable())
+                    TabView(index: $index)
 
-                        }.edgesIgnoringSafeArea(.all)
-                    }
-                }
-                TabView(index: $index)
             })
-        }.edgesIgnoringSafeArea(.all)
+//        }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
@@ -539,6 +539,7 @@ struct CircleImage: View{
              .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom == 0 ? 8 : UIApplication.shared.windows.first?.safeAreaInsets.bottom)
              .padding(.top, 8)
              .background(Color("Camel").clipShape(CShape(curvePos: curvePos)))
+
      }
  }
 
