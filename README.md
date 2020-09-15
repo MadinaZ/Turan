@@ -8,7 +8,7 @@ App includes features such as:
 -User profile.  
 -payment
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="X7UpiAn"><a href="https://imgur.com/X7UpiAn">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/42979064/93255547-e4ee7800-f7bb-11ea-8918-358c4cecb1bf.gif)
 
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="uLEgTVl"><a href="https://imgur.com/uLEgTVl">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![ezgif com-video-to-gif-2](https://user-images.githubusercontent.com/42979064/93255696-15cead00-f7bc-11ea-9bb6-dede1fec5b50.gif)
