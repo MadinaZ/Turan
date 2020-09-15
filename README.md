@@ -1,12 +1,14 @@
 # Turan Clients
 
-iOS app for residents of condominium complex
+iOS app for residents of condominium complex. 
 
 App includes features such as:  
 -making a request to a reception.  
 -ordering services   
 -User profile.  
 -payment
+
+Firebase was used as BaaS.
 
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/42979064/93255547-e4ee7800-f7bb-11ea-8918-358c4cecb1bf.gif)
 
